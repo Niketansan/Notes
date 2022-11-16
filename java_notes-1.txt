@@ -1,152 +1,162 @@
+Java compiler executes the code from top to bottom. The statements in the code are executed according to the order in which they appear. However, Java provides statements that can be used to control the flow of Java code. Such statements are called control flow statements. It is one of the fundamental features of Java, which provides a smooth flow of program.
 
+Java provides three types of control flow statements.
 
-Features of Java:
-
-Simple
-=======
- Java is very easy to learn, and its syntax is simple, clean and easy to understand. According to Sun Microsystem, Java language is a simple programming language because:
-
-Java syntax is based on C++ (so easier for programmers to learn it after C++).
-Java has removed many complicated and rarely-used features, for example, explicit pointers, operator overloading, etc.
-There is no need to remove unreferenced objects because there is an Automatic Garbage Collection in Java.
-
-
-Object-Oriented
-=============
-   Java is an object-oriented programming language. Everything in Java is an object. Object-oriented means we organize our software as a combination of different types of objects that incorporate both data and behavior
-
-Portable
+Decision Making statements
+if statements
+switch statement
+Loop statements
+do while loop
+while loop
+for loop
+break statement
+continue statement
 ===========
-   Java is portable because it facilitates you to carry the Java bytecode to any platform. It doesn't require any implementation
-Platform independent
-  ava is platform independent because it is different from other languages  like C, C++, etc. which are compiled into platform specific machines while Java is a write once, run anywhere language. A platform is the hardware or software environment in which a program runs.
+Object means a real-world entity such as a pen, chair, table, computer, watch, etc. Object-Oriented Programming is a methodology or paradigm to design a program using classes and objects. It simplifies software development and maintenance by providing some concepts:
 
-There are two types of platforms software-based and hardware-based. Java provides a software-based platform.
+Object  :
 
-The Java platform differs from most other platforms in the sense that it is a software-based platform that runs on top of other hardware-based platforms. It has two components:
+  Any entity that has state and behavior is known as an object. For example, a chair, pen, table, keyboard, bike, etc. It can be physical or logical.
 
-Runtime Environment
-API(Application Programming Interface)
-Java code can be executed on multiple platforms, for example, Windows, Linux, Sun Solaris, Mac/OS, etc. Java code is compiled by the compiler and converted into bytecode. This bytecode is a platform-independent code because it can be run on multiple platforms, i.e., Write Once and Run Anywhere (WORA).
+An Object can be defined as an instance of a class
+Class :
 
-Secured
-=========
-  Java is best known for its security. With Java, we can develop virus-free systems. Java is secured because:
+   Collection of objects is called class. It is a logical entity.
 
-No explicit pointer
-Java Programs run inside a virtual machine sandbox
+A class can also be defined as a blueprint from which you can create an individual object. Class doesn't consume any space.
 
-Robust
-  It uses strong memory management.
-There is a lack of pointers that avoids security problems.
-Java provides automatic garbage collection which runs on the Java Virtual Machine to get rid of objects which are not being used by a Java application anymore.
-There are exception handling and the type checking mechanism in Java. All these points make Java robust.
+Inheritance :
+
+  When one object acquires all the properties and behaviors of a parent object, it is known as inheritance. It provides code reusability. It is used to achieve runtime polymorphism.
+
+Polymorphism :
+
+ If one task is performed in different ways, it is known as polymorphism. For example: to convince the customer differently, to draw something, for example, shape, triangle, rectangle, etc.
+
+In Java, we use method overloading and method overriding to achieve polymorphism.
+
+Another example can be to speak something; for example, a cat speaks meow, dog barks woof, etc.
 
 
-Architecture neutral
-  Java is architecture neutral because there are no implementation dependent features, for example,
-  the size of primitive types is fixed.
+
+Abstraction :
+
+  Hiding internal details and showing functionality is known as abstraction. For example phone call, we don't know the internal processing.
+  In Java, we use abstract class and interface to achieve abstraction.
+ 
+Encapsulation :
+
+  Binding (or wrapping) code and data together into a single unit are known as encapsulation. For example, a capsule, it is wrapped with different medicines.
+
+  A java class is the example of encapsulation. Java bean is the fully encapsulated class because all the data members are private here.
   
-Interpreted
+Apart from these concepts, there are some other terms which are used in Object-Oriented design:
 
-High Performance
-Java is faster than other traditional interpreted programming languages because Java bytecode is "close" to native code. It is still a little bit slower than a compiled language (e.g., C++). Java is an interpreted language that is why it is slower than compiled languages, e.g., C, C++, etc.
-
-Multithreaded
-
- A thread is like a separate program, executing concurrently. We can write Java programs that deal with many tasks at once by defining multiple threads. The main advantage of multi-threading is that it doesn't occupy memory for each thread. It shares a common memory area. 
- Threads are important for multi-media, Web applications, etc.
+Coupling :
   
-Distributed
+  Java is an Object-oriented programming language. Coupling in Java plays an important role when you work with Java Classes and Objects. It basically refers to the extent of knowledge one class knows about the other class. So in this article, you will learn all about coupling in java, its various types along with the examples.
 
-   Java is distributed because it facilitates users to create distributed applications in Java. RMI and EJB are used for creating distributed applications.
-   This feature of Java makes us able to access files by calling the methods from any machine on the internet.
-Dynamic
-Java supports dynamic compilation and automatic memory management (garbage collection).
+Below topics are covered in this tutorial:
 
-<========================================================================================================>
+Coupling in Java
+Types of coupling
+Tight coupling
+Loose coupling
 
-Java Variables
-A variable is a container which holds the value while the Java program is executed. A variable is assigned with a data type.
+Tight Coupling:
 
-Variable is a name of memory location. There are three types of variables in java: local, instance and static.
-
-There are two types of data types in Java: primitive and non-primitive.
-
-
-Data types specify the different sizes and values that can be stored in the variable.
- There are two types of data types in Java:
-
-Primitive data types: The primitive data types include boolean, char, byte, short, int, long, float and double.
-Non-primitive data types: The non-primitive data types include Classes, Interfaces, and Arrays.
-Java Primitive Data Types
-In Java language, primitive data types are the building blocks of data manipulation. These are the most basic data types available in Java language.
-
-Java is a statically-typed programming language. It means, all variables must be declared before its use. That is why we need to declare variable's type and name.
-
-There are 8 types of primitive data types:
-
-
-boolean data type
-byte data type
-char data type
-short data type
-int data type
-long data type
-float data type
-double data type
+      It is when a group of classes are highly dependent on one another. This scenario arises when a class assumes too many responsibilities, or when one concern is spread over many classes rather than having its own class. The situation where an object creates another object for its usage, is termed as Tight Coupling. The parent object will be knowing more about the child object hence the two objects are called as tightly coupled. The dependency factor and the fact that the object cannot be changed by anybody else helps it to achieve the term, tightly coupled.
 
 
 
-<===================================================================================================>
-A list of Java keywords or reserved words are given below:
+Loose Coupling: 
+      When an object gets the object to be used from external sources, we call it loose coupling. In other words, the loose coupling means that the objects are independent. A loosely coupled code reduces maintenance and efforts. This was the disadvantage of tightly coupled code that was removed by the loosely coupled code. Let’s take a look at some of the examples of loose coupling in Java.
+   
 
-abstract: Java abstract keyword is used to declare an abstract class. An abstract class can provide the implementation of the interface. It can have abstract and non-abstract methods.
-boolean: Java boolean keyword is used to declare a variable as a boolean type. It can hold True and False values only.
-break: Java break keyword is used to break the loop or switch statement. It breaks the current flow of the program at specified conditions.
-byte: Java byte keyword is used to declare a variable that can hold 8-bit data values.
-case: Java case keyword is used with the switch statements to mark blocks of text.
-catch: Java catch keyword is used to catch the exceptions generated by try statements. It must be used after the try block only.
-char: Java char keyword is used to declare a variable that can hold unsigned 16-bit Unicode characters
-class: Java class keyword is used to declare a class.
-continue: Java continue keyword is used to continue the loop. It continues the current flow of the program and skips the remaining code at the specified condition.
-default: Java default keyword is used to specify the default block of code in a switch statement.
-do: Java do keyword is used in the control statement to declare a loop. It can iterate a part of the program several times.
-double: Java double keyword is used to declare a variable that can hold 64-bit floating-point number.
-else: Java else keyword is used to indicate the alternative branches in an if statement.
-enum: Java enum keyword is used to define a fixed set of constants. Enum constructors are always private or default.
-extends: Java extends keyword is used to indicate that a class is derived from another class or interface.
-final: Java final keyword is used to indicate that a variable holds a constant value. It is used with a variable. It is used to restrict the user from updating the value of the variable.
-finally: Java finally keyword indicates a block of code in a try-catch structure. This block is always executed whether an exception is handled or not.
-float: Java float keyword is used to declare a variable that can hold a 32-bit floating-point number.
-for: Java for keyword is used to start a for loop. It is used to execute a set of instructions/functions repeatedly when some condition becomes true. If the number of iteration is fixed, it is recommended to use for loop.
-if: Java if keyword tests the condition. It executes the if block if the condition is true.
-implements: Java implements keyword is used to implement an interface.
-import: Java import keyword makes classes and interfaces available and accessible to the current source code.
-instanceof: Java instanceof keyword is used to test whether the object is an instance of the specified class or implements an interface.
-int: Java int keyword is used to declare a variable that can hold a 32-bit signed integer.
-interface: Java interface keyword is used to declare an interface. It can have only abstract methods.
-long: Java long keyword is used to declare a variable that can hold a 64-bit integer.
-native: Java native keyword is used to specify that a method is implemented in native code using JNI (Java Native Interface).
-new: Java new keyword is used to create new objects.
-null: Java null keyword is used to indicate that a reference does not refer to anything. It removes the garbage value.
-package: Java package keyword is used to declare a Java package that includes the classes.
-private: Java private keyword is an access modifier. It is used to indicate that a method or variable may be accessed only in the class in which it is declared.
-protected: Java protected keyword is an access modifier. It can be accessible within the package and outside the package but through inheritance only. It can't be applied with the class.
-public: Java public keyword is an access modifier. It is used to indicate that an item is accessible anywhere. It has the widest scope among all other modifiers.
-return: Java return keyword is used to return from a method when its execution is complete.
-short: Java short keyword is used to declare a variable that can hold a 16-bit integer.
-static: Java static keyword is used to indicate that a variable or method is a class method. The static keyword in Java is mainly used for memory management.
-strictfp: Java strictfp is used to restrict the floating-point calculations to ensure portability.
-super: Java super keyword is a reference variable that is used to refer to parent class objects. It can be used to invoke the immediate parent class method.
-switch: The Java switch keyword contains a switch statement that executes code based on test value. The switch statement tests the equality of a variable against multiple values.
-synchronized: Java synchronized keyword is used to specify the critical sections or methods in multithreaded code.
-this: Java this keyword can be used to refer the current object in a method or constructor.
-throw: The Java throw keyword is used to explicitly throw an exception. The throw keyword is mainly used to throw custom exceptions. It is followed by an instance.
-throws: The Java throws keyword is used to declare an exception. Checked exceptions can be propagated with throws.
-transient: Java transient keyword is used in serialization. If you define any data member as transient, it will not be serialized.
-try: Java try keyword is used to start a block of code that will be tested for exceptions. The try block must be followed by either catch or finally block.
-void: Java void keyword is used to specify that a method does not have a return value.
-volatile: Java volatile keyword is used to indicate that a variable may change asynchronously.
-while: Java while keyword is used to start a while loop. This loop iterates a part of the program several times. If the number of iteration is not fixed, it is recommended to use the while loop
+Cohesion :
+  Cohesion in Java is the Object-Oriented principle most closely associated with making sure that a class is designed with a single,
+ well-focused purpose. In object-oriented design, cohesion refers to how a single class is designed. 
+ 
+ The advantage of high cohesion is that such classes are much easier to maintain (and less frequently changed) than classes with low cohesion. Another benefit of high cohesion is that classes with a well-focused purpose tend to be more reusable 
+ than other classes.
 
+
+Association :
+	In Java, two types of Association are possible:
+
+	IS-A Association
+	HAS-A Association
+	Aggregation
+	Composition
+Association in Java defines the connection between two classes that are set up through their objects. Association manages one-to-one, one-to-many, and many-to-many relationships. In Java, the multiplicity between objects is defined by the Association. It shows how objects communicate with each other and how they use the functionality and services provided by that communicated object. Association manages one-to-one, one-to-many, many-to-one and many-to-many relationships.
+
+
+Aggregation :
+
+In Java, the Aggregation association defines the HAS-A relationship. Aggregation follows the one-to-one or one-way relationship. If two entities are in the aggregation composition, and one entity fails due to some error, it will not affect the other entity.
+
+Composition :
+
+, Composition represents the part-of relationship. When there is an aggregation between two entities, the aggregate object can exist without the other entity, but in the case of Composition, the composed object can't exist. To learn more about Composition,
+
+
+    Acess-specificer :
+	
+	 public  it is accesible to every one 
+	
+	 private it is accesible to  with this class ,
+	 
+	 protected it is accesible to  with class with in package and subclass of other package
+	 
+	 default it is accesible to with in the class with in package
+	 
+	 
+	 Return Type:
+	 
+	  all primitives  types ., void , class 
+	  
+	  
+	 class can contains instance variable , static variables , constructors,
+	  instance block, static block, instance methods or normal methods, static
+	  method ,
+	  
+	  import
+	  
+	  How to create object for class synatx
+	  
+	  <class-Name> <ref-variablee-name> = new <class-Name>();
+	  
+	  <ref-variablee-name> will call has object
+	  
+	  <access-specifier> <returntype> <method-name>(){
+	  
+	  }
+	  
+	  <obj>.<method-name>();
+	  int i =1
+	    if(true){    i == 2  --false or true
+	    
+	    }
+	  
+	Assume you have class called Calculator , it should has add , sub , multiply , divison method which has return result , each method has to take two paramters 
+	
+	lastly create a object for that class and print the output
+	
+	class Calcu {
+	
+	
+	int add(int a , int b){
+	
+	 return a+b;
+	}
+	
+	main(){
+	
+	Calculator  c = new Calculator();
+	
+	int result = c.add(1,2);
+	sysout(result);
+	
+	}
+	
+	}
