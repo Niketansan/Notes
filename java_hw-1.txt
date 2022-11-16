@@ -1,0 +1,89 @@
+Program 1 :
+		Assume you have class called   , it should varialbes like firstname ,lastanme , adharnumber, age, adderess, mobileNumber .
+		we should have three methods , 
+	   1) isElgiblityFORVotingorNot it hsould age  and return boolean . 
+	   2) getFullName   it should take two paramter firstName and lastName return fullName 
+	   3)  verifyAdharNumber  it should take one paramter adharanumber , --> ahdaranumber > 16  not valid , < 16 not valid , == 16 valid , ahdarnumber empty -- not valid 
+	   4) verifyMobileNumber  -->  it should take one paramter mobileNumber --> 10 or not -->  
+           5) address --> length should not greater than 100 . and printing address you should one line one line
+	    
+Program 2 :
+	   as discussed update the calucualtor with switch case .
+	   
+Program 3 :
+	    show pratice on for loop , increment , decrement opertaion.
+    
+Program 4 :
+	
+	 amstrong number , reverse number , sumof digits from number , number print even digits ,  print evne number , prime number .
+	   
+	   
+Note all programs has to commit to your github .
+
+
+Project :
+
+    ECommerce for Photographers
+
+
+Customer.java
+
+         customerid username , firstname ,lastname , email, mobilenumber , password , List<Address>, List<PhotoMetadata>
+
+Address.java            
+        address1 
+        city 
+        town 
+        dist 
+        state
+        pincode
+
+ photoCategory
+   
+    id 
+    name .. mug, calendar
+    cost
+    types 
+       
+  PhotoMetadata :
+       metada_id
+       name 
+       extension
+       photoCategory_id
+       size 
+       customer_id
+ 
+ Photos
+      phtoid
+      metaid;
+      actualPhoto 
+
+Order 
+    cutomerid 
+    orderid
+    totalCost
+    orderconfirmation
+    adrressid
+    shippingtrackerId
+
+
+    
+     
+
+ 
+    
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
