@@ -1,0 +1,51 @@
+Project :
+
+    ECommerce for Photographers
+Dao Patterns 
+
+Customer.java
+
+         customerid username , firstname ,lastname , email, mobilenumber , password , List<Address>, List<PhotoMetadata>
+		 
+		 
+	customer dao :
+	
+	           save customer , update Customer ,getCustomerId , getCustomerByMobilenUmber  ,getCustomerId , getRelatedPhotosInfo, 
+			   
+			   getCustomerByAddress, vaildaEmailAddress, validUsername .
+
+Address.java            
+        address1 
+        city 
+        town 
+        dist 
+        state
+        pincode
+
+ photoCategory
+   
+    id 
+    name .. mug, calendar
+    cost
+    types 
+       
+  PhotoMetadata :
+       metada_id
+       name 
+       extension
+       photoCategory_id
+       size 
+       customer_id
+ 
+ Photos
+      phtoid
+      metaid;
+      actualPhoto 
+
+Order 
+    cutomerid 
+    orderid
+    totalCost
+    orderconfirmation
+    adrressid
+    shippingtrackerId

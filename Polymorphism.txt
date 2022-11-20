@@ -1,0 +1,109 @@
+A class or variable or method exists more than one form 
+then we call it is as polymorphism 
+
+overloading  : when two or more method having same method name , and reutrn must be same , method signature vary 
+
+how it should vary based on orders , type , number  (class)
+
+       public  int fileUpload(InputStream stream){
+
+
+       }
+
+
+      public int fileUpload(File f){
+
+            fielUpload(f , f.getExtenion());
+
+     }
+
+     public int fielUpload(File f , String extension){
+
+     }
+
+    public int fileUpload(String extenion , file f){
+
+
+
+    }
+
+
+  
+
+overriding :
+     
+    we are in participating in inheritence then overirding will come into the picture.
+
+
+ when two or more method having same method name , but reutrn may or may not be same(co-variant return type)
+
+ private  class or methods will not participate in the overrding .
+  
+ static class or methods will not participate in the overdiing 
+
+final clsss or methods will not particpate in the overding 
+
+for child class methods you cannot keep checked exception.
+
+=====================================
+
+Right
+      com.test  class A{
+             publi    void test() {
+
+               }
+
+         }
+
+     com.test1  class B  extends A{
+
+           
+            public void test() throws  {
+
+             }
+
+     }
+========================================
+right
+
+      com.test  class A{
+             public    void test() {
+
+               }
+
+         }
+
+     com.test1  class B  extends A{
+
+           
+            protected void test() throws  {
+
+             }
+
+     }
+
+=======================================
+
+wrong  scope is default with in class with in the package
+
+      com.test  class A{
+             void test() {
+
+               }
+
+         }
+
+     com.test1  class B  extends A{
+
+           
+            void test() throws  {
+
+             }
+
+     }
+=======================================
+
+
+
+
+           
