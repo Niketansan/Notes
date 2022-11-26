@@ -1,0 +1,55 @@
+The covariant return type specifies that the return type may vary in the same direction as the subclass.
+
+Before Java5, it was not possible to override any method by changing the return type. 
+But now, since Java5, it is possible to override method by changing the return type if subclass overrides any method whose return type is Non-Primitive
+ but it changes its return type to subclass type.
+ 
+
+
+Object --class predefined 
+
+it is parent class for the all class. It has few methods we can those methods(equals, hashcode etc).
+
+
+static :
+
+  it is a keyword , can keep to variable, methods ,class . when class loaded memory allocation will happen , it single time memory allocate.
+  
+  
+  how to call static method or variables --> by using <class-Name>
+  
+  normal variables or instance variables cannot access directly in static area
+
+static block
+
+
+<============================================================>
+
+instant block :
+
+  when ever object got instantiated then instanct block will automatically by jvm 
+
+
+final :
+
+  can keep to class, variables , methods 
+ 
+  final classes are immutables class best exaple of immutable class is String
+  
+  The final local variable a cannot be assigned.
+  
+  Cannot override the final method 
+  
+ 
+<============================================================>
+
+Arrays :
+
+ int arr[] ={1,2,4};
+ 
+ 
+ int arr1[][] ={{1,2,3},{4,5,6}};
+ 
+ int arr[] = new int(5);
+  
+<==================================================================>
