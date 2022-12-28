@@ -1,0 +1,305 @@
+The covariant return type specifies that the return type may vary in the same direction as the subclass.
+
+Before Java5, it was not possible to override any method by changing the return type. 
+But now, since Java5, it is possible to override method by changing the return type if subclass overrides any method whose return type is Non-Primitive
+ but it changes its return type to subclass type.
+ 
+
+
+Object --class predefined 
+
+it is parent class for the all class. It has few methods we can those methods(equals, hashcode etc).
+
+
+static :
+
+  it is a keyword , can keep to variable, methods ,class . when class loaded memory allocation will happen , it single time memory allocate.
+  
+  
+  how to call static method or variables --> by using <class-Name>
+  
+  normal variables or instance variables cannot access directly in static area
+
+static block
+
+
+<============================================================>
+
+instant block :
+
+  when ever object got instantiated then instanct block will automatically by jvm 
+
+
+final :
+
+  can keep to class, variables , methods 
+ 
+  final classes are immutables class best exaple of immutable class is String
+  
+  The final local variable a cannot be assigned.
+  
+  Cannot override the final method 
+  
+ 
+<============================================================>
+
+Arrays :
+
+ int arr[] ={1,2,4};
+ 
+ 
+ int arr1[][] ={{1,2,3},{4,5,6}};
+ 
+ int arr[] = new int(5);
+  
+<==================================================================>
+Exception handling 
+
+
+1) Checked Exception
+The classes that directly inherit the Throwable class except RuntimeException and Error are known as checked exceptions. For example, IOException, SQLException, etc. Checked exceptions are checked at compile-time.
+
+2) Unchecked Exception
+The classes that inherit the RuntimeException are known as unchecked exceptions. For example, ArithmeticException, NullPointerException, ArrayIndexOutOfBoundsException, etc. Unchecked exceptions are not checked at compile-time, but they are checked at runtime.
+
+3) Error
+Error is irrecoverable. Some example of errors are OutOfMemoryError, VirtualMachineError, AssertionError etc.
+
+try with  catch
+
+
+try with mutliple catch
+
+
+try with catch with finally
+
+try with mutliple catch with finally 
+
+try with finally
+
+
+finally block : it is used to maintain clean code .It will work indepdent of whether exception happened or not
+
+try{
+
+
+}catch(Exception e){
+
+
+}finally{
+
+//clean code
+}
+
+
+try with resources java 7
+
+ comes with java.lang.AutoCloseable  , which will take care of cloneacitvity . for example file closing or db close
+ 
+===========================================
+he Java throws keyword is used to declare an exception.
+ It gives an information to the programmer that there may occur an exception.
+ So, it is better for the programmer to provide the exception handling code so that the normal flow of the program can be maintained.
+
+Exception Handling is mainly used to handle the checked exceptions. If there occurs any unchecked exception such as NullPointerException,
+
+ it is programmers' fault that he is not checking the code before it being used.
+
+Syntax of Java throws
+return_type method_name() throws exception_class_name{  
+//method code  
+}  
+Which exception should be declared?
+Ans: Checked exception only, because:
+
+unchecked exception: under our control so we can correct our code.
+error: beyond our control. For example, we are unable to do anything if there occurs VirtualMachineError or StackOverflowError.
+Advantage of Java throws keyword
+Now Checked Exception can be propagated (forwarded in call stack).
+================
+
+
+
+Java throw Exception
+In Java, exceptions allows us to write good quality codes where the errors are checked at the compile time instead of runtime and we can create custom exceptions making the code recovery and debugging easier.
+
+Java throw keyword
+The Java throw keyword is used to throw an exception explicitly.
+
+We specify the exception object which is to be thrown. The Exception has some message with it that provides the error description. These exceptions may be related to user inputs, server, etc.
+
+We can throw either checked or unchecked exceptions in Java by throw keyword. It is mainly used to throw a custom exception. We will discuss custom exceptions later in this section.
+
+
+=========
+customized excpetion 
+A class should 
+extends  either  Exception class then come under checked exception
+	extends or RunExcpetionClass then it come under uncehcked excetpion
+<==================================================================>
+
+
+String 
+  
+   is  final class and it is immutable. on same variable cannot any changes .
+   
+   it alwsys create a new object 
+   
+   
+   
+   
+
+String buffer 
+  mutable 
+  
+  sysnchirized
+
+String builder 
+
+mutable
+
+non-synchorized
+
+Please find the difference b/w string ,string builder , string buffer.
+
+<==================================================================>
+Abstract :
+
+   Abstract it is a keyword (abstract) can keep to methods as well as classes
+   For abstract class we cannot create object.
+   Abstract it contains normals methods as well as method declartion.
+   when we extends the abstract class definetly we need to implementation for all abstract methods related defintion  in our child class
+ 
+<==================================================================>
+
+An interface in Java is a blueprint of a class. It has static constants and abstract methods.
+
+The interface in Java is a mechanism to achieve abstraction. There can be only abstract methods in the Java interface, not method body. It is used to achieve abstraction and multiple inheritance in Java.
+
+In other words, you can say that interfaces can have abstract methods and variables. It cannot have a method body.
+
+Java Interface also represents the IS-A relationship.
+
+It cannot be instantiated just like the abstract class.
+
+Since Java 8, we can have default and static methods in an interface.
+
+Since Java 9, we can have private methods in an interface.//information purpose
+
+Why use Java interface?
+There are mainly three reasons to use interface. They are given below.
+
+It is used to achieve abstraction.
+By interface, we can support the functionality of multiple inheritance.
+It can be used to achieve loose coupling.
+
+How to declare an interface?
+An interface is declared by using the interface keyword. It provides total abstraction; means all the methods in an interface are declared with the empty body, and all the fields are public, static and final by default. 
+A class that implements an interface must implement all the methods declared in the interface.
+
+Syntax:
+interface <interface_name>{  
+      
+	  Since Java 8, interface can have default and static methods which is discussed later.
+    // declare constant fields  
+    // declare methods that abstract   
+    // by default.  
+	
+	public  void add();
+}  
+
+
+Since Java 8, interface can have default and static methods which is discussed later.
+
+
+=====================
+abstract class A{// u cannot instatite the object for the abstaract class.
+
+public static final String name ="sairam";
+
+  public abstract  void add();  //misisng stmt
+  
+ }
+
+class B  extends A{ //Multilevel inheritence
+
+
+  public void add(){
+  
+  
+  }
+  
+  
+
+}
+
+main 
+
+  B b  = new B();
+============================
+"Implements " keyword .. A interface needed another class we shoudl use implements keywords
+
+"extends" keyword  .. A class needed another class we should we use extends keyword
+
+"extends" keyword .. A interface needed another interfacce we should use extends keyword 
+
+One class can extends only one class at a time .but it can implement mulitple interfaces.
+
+
+interface MobileAPI{
+
+    public String userInterface();
+	
+	
+   public String userScrreenSzie();
+}
+
+interface SamsungOldAPI extends MobileAPI{
+
+  public  String  getVersion();
+}
+
+interface A{
+
+ public  String  getVersionRead();
+}
+
+
+abstract class SamsungCustomImpl {
+
+
+  public abstract String scrolling ();
+  
+  
+
+}
+
+class SamsuangAPI extends SamsungCustomImpl implements SamsungOldAPI, A{  //Multiple Inheritence we acheive only suing intefaces
+
+
+ public String userInterface(){
+ 
+ }
+ 
+ public String userScreenSize(){
+ 
+ 
+ }
+ 
+ public String getVersion(){
+ 
+ 
+ }
+ 
+ public  String scrolling(){
+ 
+ 
+ }
+ 
+ public String getVersionRead(){
+ 
+ 
+ }
+
+}
+
