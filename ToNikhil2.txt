@@ -1,0 +1,31 @@
+Servlets:
+========
+
+Servlet technology is used to create a web application (resides at server side and generates a dynamic web page).
+
+Servlet technology is robust and scalable because of java language. Before Servlet, CGI (Common Gateway Interface) scripting language was common as a server-side programming language. 
+However, there were many disadvantages to this technology.
+
+There are many interfaces and classes in the Servlet API such as Servlet, GenericServlet, HttpServlet,
+
+
+Servlet is a technology which is used to create a web application.
+Servlet is an API that provides many interfaces and classes including documentation.
+Servlet is an interface that must be implemented for creating any Servlet.
+Servlet is a class that extends the capabilities of the servers and responds to the incoming requests. It can respond to any requests.
+Servlet is a web component that is deployed on the server to create a dynamic web page.
+
+
+A web application is an application accessible from the web.
+ A web application is composed of web components like Servlet, JSP, Filter, etc. and other elements such as HTML, CSS, and JavaScript. 
+The web components typically execute in Web Server and respond to the HTTP request.
+
+
+
+172.12.12.1:8080
+ip adrress :port 
+
+
+what is tomcat server ?
+
+
