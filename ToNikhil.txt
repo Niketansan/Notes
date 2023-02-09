@@ -1,0 +1,952 @@
+
+Constructor:
+
+
+class Test{
+
+ public  Test(int a){
+
+ }
+ <access-specifier> <class-name>(){
+
+ }
+
+ Test t = new Test(1);
+}
+
+The covariant return type specifies that the return type may vary in the same direction as the subclass.
+
+Before Java5, it was not possible to override any method by changing the return type. 
+But now, since Java5, it is possible to override method by changing the return type if subclass overrides any method whose return type is Non-Primitive
+ but it changes its return type to subclass type.
+ 
+
+
+Object --class predefined 
+
+it is parent class for the all class. It has few methods we can those methods(equals, hashcode etc).
+
+
+static :
+
+  it is a keyword , can keep to variable, methods ,class . when class loaded memory allocation will happen , it single time memory allocate.
+  
+  
+  how to call static method or variables --> by using <class-Name>
+  
+  normal variables or instance variables cannot access directly in static area
+
+static block
+
+
+<============================================================>
+
+instant block :
+
+  when ever object got instantiated then instanct block will automatically by jvm 
+
+
+final :
+
+  can keep to class, variables , methods 
+ 
+  final classes are immutables class best exaple of immutable class is String
+  
+  The final local variable a cannot be assigned.
+  
+  Cannot override the final method 
+  
+ 
+<============================================================>
+
+Arrays :
+
+ int arr[] ={1,2,4};
+ 
+ 
+ int arr1[][] ={{1,2,3},{4,5,6}};
+ 
+ int arr[] = new int(5);
+  
+<==================================================================>
+Exception handling 
+
+
+1) Checked Exception
+The classes that directly inherit the Throwable class except RuntimeException and Error are known as checked exceptions. For example, IOException, SQLException, etc. Checked exceptions are checked at compile-time.
+
+2) Unchecked Exception
+The classes that inherit the RuntimeException are known as unchecked exceptions. For example, ArithmeticException, NullPointerException, ArrayIndexOutOfBoundsException, etc. Unchecked exceptions are not checked at compile-time, but they are checked at runtime.
+
+3) Error
+Error is irrecoverable. Some example of errors are OutOfMemoryError, VirtualMachineError, AssertionError etc.
+
+try with  catch
+
+
+try with mutliple catch
+
+
+try with catch with finally
+
+try with mutliple catch with finally 
+
+try with finally
+
+
+finally block : it is used to maintain clean code .It will work indepdent of whether exception happened or not
+
+try{
+
+
+}catch(Exception e){
+
+
+}finally{
+
+//clean code
+}
+
+
+try with resources java 7
+
+ comes with java.lang.AutoCloseable  , which will take care of cloneacitvity . for example file closing or db close
+ 
+===========================================
+he Java throws keyword is used to declare an exception.
+ It gives an information to the programmer that there may occur an exception.
+ So, it is better for the programmer to provide the exception handling code so that the normal flow of the program can be maintained.
+
+Exception Handling is mainly used to handle the checked exceptions. If there occurs any unchecked exception such as NullPointerException,
+
+ it is programmers' fault that he is not checking the code before it being used.
+
+Syntax of Java throws
+return_type method_name() throws exception_class_name{  
+//method code  
+}  
+Which exception should be declared?
+Ans: Checked exception only, because:
+
+unchecked exception: under our control so we can correct our code.
+error: beyond our control. For example, we are unable to do anything if there occurs VirtualMachineError or StackOverflowError.
+Advantage of Java throws keyword
+Now Checked Exception can be propagated (forwarded in call stack).
+================
+
+
+
+Java throw Exception
+In Java, exceptions allows us to write good quality codes where the errors are checked at the compile time instead of runtime and we can create custom exceptions making the code recovery and debugging easier.
+
+Java throw keyword
+The Java throw keyword is used to throw an exception explicitly.
+
+We specify the exception object which is to be thrown. The Exception has some message with it that provides the error description. These exceptions may be related to user inputs, server, etc.
+
+We can throw either checked or unchecked exceptions in Java by throw keyword. It is mainly used to throw a custom exception. We will discuss custom exceptions later in this section.
+
+
+=========
+customized excpetion 
+A class should 
+extends  either  Exception class then come under checked exception
+	extends or RunExcpetion class then it come under uncehcked excetpion
+<==================================================================>
+
+
+String 
+  
+   is  final class and it is immutable. on same variable cannot any changes .
+   
+   it alwsys create a new object 
+   
+   
+   
+   
+
+String buffer 
+  mutable 
+  
+  sysnchirized
+
+String builder 
+
+mutable
+
+non-synchorized
+
+Please find the difference b/w string ,string builder , string buffer.
+
+<==================================================================>
+Abstract :
+
+   Abstract it is a keyword (abstract) can keep to methods as well as classes
+   For abstract class we cannot create object.
+   Abstract it contains normals methods as well as method declartion.
+   when we extends the abstract class definetly we need to implementation for all abstract methods related defintion  in our child class
+ 
+<==================================================================>
+
+An interface in Java is a blueprint of a class. It has static constants and abstract methods.
+
+The interface in Java is a mechanism to achieve abstraction. There can be only abstract methods in the Java interface, not method body. It is used to achieve abstraction and multiple inheritance in Java.
+
+In other words, you can say that interfaces can have abstract methods and variables. It cannot have a method body.
+
+Java Interface also represents the IS-A relationship.
+
+It cannot be instantiated just like the abstract class.
+
+Since Java 8, we can have default and static methods in an interface.
+
+Since Java 9, we can have private methods in an interface.//information purpose
+
+Why use Java interface?
+There are mainly three reasons to use interface. They are given below.
+
+It is used to achieve abstraction.
+By interface, we can support the functionality of multiple inheritance.
+It can be used to achieve loose coupling.
+
+How to declare an interface?
+An interface is declared by using the interface keyword. It provides total abstraction; means all the methods in an interface are declared with the empty body, and all the fields are public, static and final by default. 
+A class that implements an interface must implement all the methods declared in the interface.
+
+Syntax:
+interface <interface_name>{  
+      
+	  Since Java 8, interface can have default and static methods which is discussed later.
+    // declare constant fields  
+    // declare methods that abstract   
+    // by default.  
+	
+	public  void add();
+}  
+
+
+Since Java 8, interface can have default and static methods which is discussed later.
+
+
+=====================
+abstract class A{// u cannot instatite the object for the abstaract class.
+
+public static final String name ="sairam";
+
+  public abstract  void add();  //misisng stmt
+  
+ }
+
+class B  extends A{ //Multilevel inheritence
+
+
+  public void add(){
+  
+  
+  }
+  
+  
+
+}
+
+main 
+
+  B b  = new B();
+============================
+"Implements " keyword .. A interface needed another class we shoudl use implements keywords
+
+"extends" keyword  .. A class needed another class we should we use extends keyword
+
+"extends" keyword .. A interface needed another interfacce we should use extends keyword 
+
+One class can extends only one class at a time .but it can implement mulitple interfaces.
+
+
+interface MobileAPI{
+
+    public String userInterface();
+	
+	
+   public String userScrreenSzie();
+}
+
+interface SamsungOldAPI extends MobileAPI{
+
+  public  String  getVersion();
+}
+
+interface A{
+
+ public  String  getVersionRead();
+}
+
+
+abstract class SamsungCustomImpl {
+
+
+  public abstract String scrolling ();
+  
+  
+
+}
+
+class SamsuangAPI extends SamsungCustomImpl implements SamsungOldAPI, A{  //Multiple Inheritence we acheive only suing intefaces
+
+
+ public String userInterface(){
+ 
+ }
+ 
+ public String userScreenSize(){
+ 
+ 
+ }
+ 
+ public String getVersion(){
+ 
+ 
+ }
+ 
+ public  String scrolling(){
+ 
+ 
+ }
+ 
+ public String getVersionRead(){
+ 
+ 
+ }
+
+}
+
+=============================
+Collectionframework :
+
+  arrays 
+  
+  
+  int arr[2] = {1,23234} //homogenous
+  Object arr[] ={123};
+  fixed size
+  not growable 
+  no redmite methods
+  
+  
+  CollectionFramwork :
+  
+ 1. hetergenous 
+ 2. growable nature
+ 3. redmiate methods
+  
+ 1. when we go across collectionframe work we deal with objects or not primitive values
+ 
+ 2. also avalaible homogenous concept called typesafety
+ int a = 1
+ 
+ predefined Wrapper class 
+ 
+ Integer
+ Float 
+ Double
+ 
+  new Integer(1);
+ 
+ 
+  collectionframework related class and interfaces are avaliable in util package
+ 
+ 
+import java.util.List;
+
+
+Collection is the parent interface 
+
+Collections is the class in util package.
+
+List :
+
+ insertionorder preversed
+ duplicate elements are allowed 
+ 
+ 
+ Set:
+ insertionorder not preversed
+  duplicate elements are not allowed 
+
+Vector:
+  100% growable in nature.
+
+
+ Map Interface :
+ ===================
+		 
+		 If you want to represent data as key value pairs then we will go Map Interface.
+		 duplicates keys are not allowed
+		duplicates values are allowed
+		 null insertion of key allowed once .
+		 null insertions of values allowed 
+		 insertion order  not preveresd.
+		 non -synchorized
+		 more performance 
+		 not thread safe
+		 we may face concurrentModificationexception  fail fast exception .
+		 
+		 
+ HashTable :
+ ============
+		 
+		 If you want to represent data as key value pairs then we will go HashTable
+		 duplicates keys are not allowed
+		 duplicates values are allowed
+		 null insertions of values allowed 
+		 insertion order   preveresd.
+		 synchorized  or thread-safe
+		 low performance
+		 It will allow only one thread at at time.
+		 It will lock the whole object .
+
+ConCurrentHashMap :
+======================
+
+       If you want to represent data as key value pairs then we will go ConCurrentHashMap
+		 duplicates keys are not allowed
+		 duplicates values are allowed
+		 null insertions of values allowed 
+		 insertion order   preveresd.
+		 synchorized  or thread-safe
+		  good performance
+		 It will allow only one thread at at time.
+		 It will lock the while happen at segment level  . fail -safe it will not concurrentModificationexception
+		 
+Sr. No.	Key	Fail-Fast	Fail-Safe
+1
+Exception
+Any changes in the collection, such as adding, removing and updating collection during a thread are iterating collection then Fail fast throw concurrent modification exception. 
+The fail-safe collection doesn't throw exception. 
+2.
+Type of collection
+ArrayList and hashmap collection are the examples of fail-fast iterator 
+CopyOnWrite and concurrent modification are the examples of a fail-safe iterator 
+3.
+Performance and Memory
+It's work on actual collection instead. So, this iterator doesn't require extra memory and time 
+It's working on a clone of the collection instead of actual collection. It is overhead in terms of time and memory
+4.
+Modifications
+ Iterators don't allow modifications of a collection while iterating over it.
+Fail-Safe iterators allow modifications of a collection while iterating over it.
+
+=========
+CopyOnWriteArrayList: 
+=============
+
+As the name indicates, CopyOnWriteArrayList creates a Cloned copy of underlying ArrayList, for every update operation at a certain point both will be synchronized automatically, which is taken care of by JVM. Therefore, there is no effect for threads that are performing read operation.
+It is costly to use because for every update operation a cloned copy will be created. Hence, CopyOnWriteArrayList is the best choice if our frequent operation is read operation.
+The underlined data structure is a grow-able array.
+It is a thread-safe version of ArrayList.
+Insertion is preserved, duplicates, null, and heterogeneous Objects are allowed.
+The main important point about CopyOnWriteArrayList is the Iterator of CopyOnWriteArrayList can not perform remove operation otherwise we get Run-time exception saying UnsupportedOperationException. add() and set() methods on CopyOnWriteArrayList iterator also throws UnsupportedOperationException.
+ Also Iterator of CopyOnWriteArrayList will never throw ConcurrentModificationException.
+
+
+There are three cursors in Java.
+
+Iterator (Universal cursor)
+Enumeration is legacy (vector , hashtable)
+ListIterator (bi direction cursor)
+
+to reterive the data .
+
+=======================
+Internal Implmenetation of HashMap :
+==================================
+
+ HashMap how Internally works  ??
+
+Jvm will create a object in heapmemory
+
+It will create 16 buckets in memory
+
+If HashMap reaches more than 75% of its capacity then it doubles 
+the exisiting capacity
+
+LoadFactor => 75% or 0.75
+
+Bucket is nothing but Linked List 
+
+LinkedList stores data in form node 
+one node is points to another node 
+
+start  -->(node(data))P--->(node2(data))
+
+
+HashMap try keep key value pairs.
+
+JVM will take key(object) then calculate the hashCode() of key 
+and then find bucket index ( hashCode &(length-1))
+
+Based on bucketIndex will keep key value in that index.
+
+if hashcollision happen 
+then it will chck for key equals or not 
+if key is equals it will be replace old value with new value.
+
+or else it will add value to existing node .
+===============================
+
+Internal Implementation of HashSet :
+==============================
+
+  HashSet internal uses HashMap 
+  
+  when ever we create a hashset object internal it will create HashMap
+  
+  when we add values to hashset ..
+  
+  internal we will add to value to map 
+  
+  map.put(<value> , PRESENT);
+  
+  from here internal implmentation of hashMap.
+===================
+Internal Implementation of  List:
+  
+   
+===================
+IT will allows only homogenous
+it will provide default natural sorting order
+Comparabale interface which has to compareTo for comparing which help internal for sorting purpose.	
+it is avaliable in java.lang
+TreeSet :
+
+ 
+
+TreeMap :
+
+===================
+Stack (LIFO):
+
+  stack follow Last in first out 
+  it has peek , pop , push , search 
+  and along with vector class implementation methods 
+  
+=================
+Queue (FIFO):
+
+  QUeue it is an interface ,for that we have implementation class ProiortyQueue etc.
+  PriorityQueue
+=================
+Comparable	
+1) Comparable provides a single sorting sequence. In other words, we can sort the collection on the basis of a single element such as id, name, and price.	
+2) Comparable affects the original class, i.e., the actual class is modified.
+3) Comparable provides compareTo() method to sort elements.
+4) Comparable is present in java.lang package.
+5) We can sort the list elements of Comparable type by Collections.sort(List) method.	
+
+Comparator
+1)The Comparator provides multiple sorting sequences. In other words, we can sort the collection on the basis of multiple elements such as id, name, and price etc.
+2)Comparator doesn't affect the original class, i.e., the actual class is not modified.
+3)Comparator provides compare() method to sort elements.
+4)A Comparator is present in the java.util package.
+5)We can sort the list elements of Comparator type by Collections.sort(List, Comparator) method.
+====================================================================================================================================
+Multithreading in Java is a process of executing multiple threads simultaneously.
+
+A thread is a lightweight sub-process, the smallest unit of processing. 
+Multiprocessing and multithreading, both are used to achieve multitasking.
+
+However, we use multithreading than multiprocessing because threads use a shared memory area. 
+They don't allocate separate memory area so saves memory, and context-switching between the threads takes less time than process.
+
+Java Multithreading is mostly used in games, animation, etc.
+
+Advantages of Java Multithreading:
+
+1) It doesn't block the user because threads are independent and you can perform 
+multiple operations at the same time.
+
+2) You can perform many operations together, so it saves time.
+
+3) Threads are independent, so it doesn't affect other threads if an exception occurs in a single thread.
+
+
+Multitasking
+Multitasking is a process of executing multiple tasks simultaneously.
+ We use multitasking to utilize the CPU. Multitasking can be achieved in two ways:
+
+Process-based Multitasking (Multiprocessing)
+
+Thread-based Multitasking (Multithreading)
+
+
+Process-based Multitasking (Multiprocessing) :
+
+Each process has an address in memory. In other words, each process allocates a separate memory area.
+A process is heavyweight.
+Cost of communication between the process is high.
+Switching from one process to another requires some time for saving and loading registers, memory maps, updating lists, etc.
+
+
+ Thread-based Multitasking (Multithreading) :
+ 
+Threads share the same address space.
+A thread is lightweight.
+Cost of communication between the thread is low.
+
+
+
+How to create a thread ?
+
+ A thread can be created in two  ways
+
+one is by using Thread class
+two is by using Runnable interface 
+
+class Test extends Thread {
+
+    public void run(){
+          
+
+   }
+
+
+ Test t = new Test();
+
+  
+  t.start();
+
+
+
+ }
+ or class Test implements Runnable {
+
+
+ public void run(){
+          
+
+   }
+
+Test t = new Test();
+
+  Thread t1 = new Thread(t);
+  t.start();
+ 
+
+}
+
+Thread LifeCycle 
+
+we have  4 states ie;
+
+New , Runnable, Running , DeadState.
+
+
+Perferable way of create a thread is by using Runnable Interface.
+
+in this your custom class we can implements mulitple interfaces as well as extends a class.
+class Testing{
+
+
+}
+interface Testing2{
+
+
+}
+
+class Test implements Runnable, Testing2 extends Testing {
+
+
+
+}
+ThreadScheduler --> decide the thread execution part
+
+yield(), Sleep(), join()
+
+Sleep():
+ It we want to a thread to wait for a particular amount of time , then we can go for sleep method
+
+yield():
+ The yield() method of thread class causes the currently executing thread object to temporarily pause and allow other threads to execute.
+
+join():
+When the join() method is invoked, the current thread stops its execution and the thread goes into the wait state. The current thread remains in the wait 
+state until the thread on which the join() method is invoked has achieved its dead state. 
+
+Daemon Thread in Java:
+======================
+Daemon thread in Java is a service provider thread that provides services to the user thread. Its life depend on the mercy of user threads i.e. 
+when all the user threads dies, JVM terminates this thread automatically.
+
+There are many java daemon threads running automatically e.g. gc, finalizer etc.
+
+You can see all the detail by typing the jconsole in the command prompt. 
+The jconsole tool provides information about the loaded classes, memory usage, running threads etc.
+
+Points to remember for Daemon Thread in Java
+It provides services to user threads for background supporting tasks. It has no role in life than to serve user threads.
+Its life depends on user threads.
+It is a low priority thread.
+
+
+==================================
+Java Thread Pool:
+
+Java Thread pool represents a group of worker threads that are waiting for the job and
+ reused many times.
+
+In the case of a thread pool, a group of fixed-size threads is created.
+ A thread from the thread pool is pulled out and assigned a job by the service provider. 
+ After completion of the job, the thread is contained in the thread pool again.
+
+Thread Pool Methods
+newFixedThreadPool(int s): The method creates a thread pool of the fixed size s.
+
+newCachedThreadPool(): The method creates a new thread pool that creates the new threads when needed but will still
+ use the previously created thread whenever they are available to us
+
+An Executor that provides methods to manage termination andmethods that can produce a Future for
+ tracking progress ofone or more asynchronous tasks. 
+ 
+ ExecutorService has few method execute(), submit().
+ for these need give for our objects.
+Callable an interface it has call method(like run())
+ when we will go callable means if we return the result .
+ 
+
+==================================================
+Synchronization in Java
+Synchronization in Java is the capability to control the access of multiple threads to any shared resource.
+
+Java Synchronization is better option where we want to allow only one thread to access the shared resource.
+
+Why use Synchronization?
+The synchronization is mainly used to
+
+To prevent thread interference.
+To prevent consistency problem.
+
+
+using synchroized key word
+
+can keep methods , it will be avaliable block 
+
+synchorized(this){
+
+
+}
+ synchronized static  test(){ //static synhroization.
+ 
+ 
+ }
+wait(1000) ,notify() , notifyAll()
+=====================================================
+DeadLock:
+
+  If one thread waiting for other threads , that waiting never ends .
+
+to avoid dead lock we need to handle the thread communication correctly 
+=====================================================
+ Java I/O package
+Java I/O (Input and Output) is used to process the input and produce the output.
+
+Java uses the concept of a stream to make I/O operation fast. The java.io package contains all the classes required for input and output operations.
+
+We can perform file handling in Java by Java I/O API.
+
+
+OutputStream
+Java application uses an output stream to write data to a destination; it may be a file, an array, peripheral device or socket.
+
+
+InputStream
+Java application uses an input stream to read data from a source; it may be a file, an array, peripheral device or socket.
+
+apache poi.jar  --excel sheet reading and writing .
+
+Java DataOutputStream class allows an application to write primitive Java data types to the output stream 
+
+in a machine-independent way.
+
+Java application generally uses the data output stream to write 
+data that can later be read by a data input stream.
+
+=========================
+
+
+Java DataInputStream class allows an application to read primitive data from the
+
+ input stream in a machine-independent way.
+
+Java application generally uses the data output stream to write data that can later be read by a data input stream.
+
+==========================
+
+Java FilterOutputStream class implements the OutputStream class. 
+
+It provides different sub classes such as BufferedOutputStream and
+ DataOutputStream to provide additional functionality.
+ So it is less used individually.
+==========================
+Java FilterInputStream class implements the InputStream. It contains different sub classes as BufferedInputStream, DataInputStream for providing additional functionality.
+ So it is less used individually.
+============================
+
+
+================================================================================
+
+Java 8 features
+
+1) functional interfaces -> a interface which has only one abstract method but it can have default methods and static methods
+
+2) lambaexpress -> when we have fucntional interface you dont have a implementation class separately , we can use lamba express -> 
+3) method reference
+4) streams :
+he Stream API is used to process collections of objects. A stream is a sequence of objects that supports various methods which can be pipelined to produce the desired result.
+The features of Java stream are –
+
+A stream is not a data structure instead it takes input from the Collections, Arrays or I/O channels.
+Streams don’t change the original data structure, they only provide the result as per the pipelined methods.
+Each intermediate operation is lazily executed and returns a stream as a result, hence various intermediate operations can be pipelined. Terminal operations mark the end of the stream and return the result.
+Different Operations On Streams-
+Intermediate Operations:
+
+map: The map method is used to returns a stream consisting of the results of applying the given function to the elements of this stream.
+List number = Arrays.asList(2,3,4,5);
+List square = number.stream().map(x->x*x).collect(Collectors.toList());
+filter: The filter method is used to select elements as per the Predicate passed as argument.
+List names = Arrays.asList("Reflection","Collection","Stream");
+List result = names.stream().filter(s->s.startsWith("S")).collect(Collectors.toList());
+sorted: The sorted method is used to sort the stream.
+List names = Arrays.asList("Reflection","Collection","Stream");
+List result = names.stream().sorted().collect(Collectors.toList());
+Terminal Operations:
+
+collect: The collect method is used to return the result of the intermediate operations performed on the stream.
+List number = Arrays.asList(2,3,4,5,3);
+Set square = number.stream().map(x->x*x).collect(Collectors.toSet());
+forEach: The forEach method is used to iterate through every element of the stream.
+List number = Arrays.asList(2,3,4,5);
+number.stream().map(x->x*x).forEach(y->System.out.println(y));
+reduce: The reduce method is used to reduce the elements of a stream to a single value.
+The reduce method takes a BinaryOperator as a parameter.
+List number = Arrays.asList
+5) optional
+
+skip , limit , reduce , findFirst , FindAny , max ,min, anymatch , all match 
+================================================================================
+MYSQL Basics
+
+Create tables , alter tables ,insert , update , delete , infromation in the table.
+
+functions, joins 
+
+
+plz check as discussed .
+
+show databases;
+
+CREATE DATABASE billingsoftware;
+use billingsoftware;
+
+show tables;
+
+create table testing123 (id varchar(24), name varchar(40)); 
+
+select * from testing123  where id ="123'
+
+update testing123  set id ='123' where name='1234'
+
+select * from testing123 ;
+
+delete from testing123  where id = '123;'
+
+select * from users_roles
+
+drop table user;
+
+SELECT *  FROM orders  inner JOIN customer  ON orders.customer_id = customer.customer_id;    
+
+==================
+JDBC:
+JDBC stands for Java Database Connectivity. JDBC is a Java API to connect and execute the query with the database. It is a part of JavaSE (Java Standard Edition). 
+JDBC API uses JDBC drivers to connect with the database. There are four types of JDBC drivers:
+
+JDBC-ODBC Bridge Driver,
+Native Driver,
+Network Protocol Driver, and
+Thin Driver
+
+We can use JDBC API to access tabular data stored in any relational database.
+ By the help of JDBC API, we can save, update, delete and fetch data from the database.
+
+There are 5 steps to connect any java application with the database using JDBC. These steps are as follows:
+Register the Driver class
+Create connection
+Create statement
+Execute queries
+Close connection
+
+
+The PreparedStatement interface is a subinterface of Statement. It is used to execute parameterized query.
+
+String sql="insert into testing123 values(?,?,?)";  
+As you can see, we are passing parameter (?) for the values. Its value will be set by calling the setter methods of PreparedStatement.
+
+why use PreparedStatement?
+Improves performance: The performance of the application will be faster if you use PreparedStatement interface because query is compiled only once.
+
+
+1)help us to avoid sql injections
+
+It is used when SQL query is to be executed only once.	 It is used when SQL query is to be executed multiple times.
+You can not pass parameters at runtime.	                 You can pass parameters at runtime.
+Used for CREATE, ALTER, DROP statements.	         Used for the queries which are to be executed multiple times.
+Performance is very low.	                         Performance is better than Statement.
+It is base interface.	                                 It extends statement interface.
+Used to execute normal SQL queries.	                 Used to execute dynamic SQL queries.
+We can not use statement for reading binary data.	 We can use Preparedstatement for reading binary data.
+It is used for DDL statements.	                         It is used for any SQL Query.
+We can not use statement for writing binary data.	 We can use Preparedstatement for writing binary data.
+
+===============================
+CallableStatement interface is used to call the stored procedures and functions
+
+We can have business logic on the database by the use of stored procedures and functions that will make the performance better because these are precompiled.
+
+DELIMITER &&  
+create procedure test123(IN input VARCHAR(30),IN name1 VARCHAR(30))
+BEGIN  
+insert into testing123 (id,name) values(input,name1);  
+END &&  
+DELIMITER ;   
+
+
+CALL test123('102','sairam');  
+
+===========================
+ResultSetMetaData :
+
+
+The metadata means data about data i.e. we can get further information from the data.
+
+If you have to get metadata of a table like total number of column, column name, column type etc. ,
+ ResultSetMetaData interface is useful because it provides methods to get metadata from the ResultSet object.
+
+=======================================
+Transaction Management in JDBC
+Transaction represents a single unit of work.
+
+The ACID properties describes the transaction management well. ACID stands for Atomicity, Consistency, isolation and durability.
+
+Atomicity means either all successful or none.
+
+Consistency ensures bringing the database from one consistent state to another consistent state.
+
+Isolation ensures that transaction is isolated from other transaction.
+
+Durability means once a transaction has been committed, it will remain so, even in the event of errors, power loss etc.
+
+Advantage of Transaction Mangaement
+fast performance It makes the performance fast because database is hit at the time of commit.
+=====================================
+
+

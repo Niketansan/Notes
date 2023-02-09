@@ -1,10 +1,24 @@
 package com.pratice;
 
 interface MobileAPI {
+	
+	public void add();
 
 	public String userInterface();
 
-	public String userScrreenSzie();
+	 String userScrreenSzie();
+	
+	default void defaultTest() {
+		System.out.println("testing");
+		
+		System.out.println("New Implementation Logic");
+	}
+	
+;
+	
+	public static void  getMobileInterface() {
+		System.out.println("12313212");
+	}
 }
 
 interface SamsungOldAPI extends MobileAPI {
@@ -55,6 +69,14 @@ class SamsuangAPI extends SamsungCustomImpl implements SamsungOldAPI, VersionAPI
 		return "scrolling";
 	} // Multiple Inheritence we acheive only using interfaces
 
+	@Override
+	public void add() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	
+	
 }
 
 class MIMobile implements SamsungOldAPI, VersionAPI  {
@@ -82,6 +104,12 @@ class MIMobile implements SamsungOldAPI, VersionAPI  {
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+	@Override
+	public void add() {
+		// TODO Auto-generated method stub
+		
+	}
 	
 }
 public class InterfaceExample {
@@ -99,11 +127,10 @@ public class InterfaceExample {
 		
 		MobileAPI  miObject = new MIMobile();
 		System.out.println(miObject.userScrreenSzie());
+		
+		MobileAPI.getMobileInterface();
+		samsumgObj.defaultTest();
+		
 
 	}
 }
-/*
-SaiRam Sir: UserDao -- Interface
-SaiRam Sir: UserDaoImpl -class
-SaiRam Sir: UserDao userobj = new UserDaoImpl
-SaiRam Sir: save , delete , update , getuser*/

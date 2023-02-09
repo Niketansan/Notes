@@ -237,6 +237,7 @@ main
 
   B b  = new B();
 ============================
+-------------------------------------------INTERFACE--------------------------------------
 "Implements " keyword .. A interface needed another class we shoudl use implements keywords
 
 "extends" keyword  .. A class needed another class we should we use extends keyword

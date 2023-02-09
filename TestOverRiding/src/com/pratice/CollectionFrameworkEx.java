@@ -24,7 +24,7 @@ class User {
 	String userName;
 	String firstName;
 	String lastName;
-	String address ;
+	String address;
 
 	User(String userName) {
 		this.userName = userName;
@@ -80,8 +80,6 @@ public class CollectionFrameworkEx {
 
 		list.addAll(list2);
 		System.out.println(list);
-		
-	
 
 		// list.clear();
 
@@ -156,8 +154,7 @@ public class CollectionFrameworkEx {
 		s.add(4);
 		s.add(8);
 		s.add(8);
-	
-	
+
 		System.out.println("HashCode " + s.hashCode());
 		System.out.println(s.size());
 		System.out.println(s);
@@ -198,6 +195,8 @@ public class CollectionFrameworkEx {
 		map.forEach((x, y) -> {
 			System.out.println(x + " " + y);
 		});
+		
+		
 
 		System.out.println(map.containsKey("1"));
 
@@ -236,60 +235,59 @@ public class CollectionFrameworkEx {
 			System.out.println("Enumeration " + object);
 
 		}
-	//
-		
+		//
+
 		TreeSet st = new TreeSet();
-		
+
 		st.add(1);
 		st.add(10);
 		st.add(0);
 		st.add(0);
 		System.out.println(st.ceiling(2));
-	
+
 		System.out.println(st);
 
-		
-		TreeMap<String , String> mapst = new TreeMap<String, String>();
-		
+		TreeMap<String, String> mapst = new TreeMap<String, String>();
+
 		mapst.put("ter", "ert");
 		mapst.put("sai", "ert");
 		System.out.println(mapst.firstKey());
 		System.out.println(mapst);
-		
-		
-		Stack stk = new Stack(); 
-		
+
+		Stack stk = new Stack();
+
 		stk.push(4);
 		stk.push(2);
 		stk.push(3);
-		
+
 		stk.add(5);
-		
-		
+
 		System.out.println(stk.peek());
 		System.out.println(stk.pop());
-		
+
 		System.out.println(stk.search(2));
-	  Collections.sort(stk);
-	  System.out.println(stk);
+		Collections.sort(stk);
+		System.out.println(stk);
 		System.out.println(stk.get(0));
-		
-		
+
 		PriorityQueue que = new PriorityQueue();
 		que.add(7);
 		que.add(8);
 		que.add(9);
 		que.offer(89);
-		
+
 		System.out.println(que);
 		System.out.println(que.element());
 		System.out.println(que.peek());
 		System.out.println(que.poll());
-		
+
 		System.out.println(que);
 		System.out.println(que.remove());
-	
+
 		System.out.println(que);
+		
+		
+		
 
 	}
 
